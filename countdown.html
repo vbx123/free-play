@@ -1,0 +1,29 @@
+
+<!-- File: countdown.html -->
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>العد التنازلي للمسابقة</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>مرحبا بك في المسابقة!</h1>
+        <h2>العد التنازلي: <span id="countdownTimer"></span></h2>
+        
+        <div id="profile">
+            <!-- هنا يظهر بروفايل المستخدم مع إمكانية تعديل الاسم -->
+            <p>اسم المستخدم: <span id="currentUsername"></span></p>
+            <button onclick="editProfile()">تعديل الاسم</button>
+        </div>
+
+        <div id="quiz">
+            <!-- هنا يظهر السؤال مع الإجابات -->
+        </div>
+    </div>
+    <script src="countdown.js"></script>
+</body>
+</html>
+

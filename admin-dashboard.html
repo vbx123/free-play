@@ -1,0 +1,55 @@
+
+<!-- File: admin-dashboard.html -->
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لوحة تحكم الأدمن</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>لوحة تحكم الأدمن</h1>
+        
+        <!-- زر للإيقاف والبدء في المسابقة -->
+        <button id="startStopButton">بدء المسابقة</button>
+
+        <h2>إدارة المستخدمين</h2>
+        
+        <!-- فلتر المستخدمين -->
+        <label for="userFilter">فلتر المستخدمين:</label>
+        <select id="userFilter">
+            <option value="all">كل المستخدمين</option>
+            <option value="active">المتصلين الآن</option>
+            <option value="banned">المحظورين</option>
+            <option value="inactive">المستخدمين الغير نشطين</option>
+        </select>
+
+        <div id="userList">
+            <!-- سيتم عرض المستخدمين هنا -->
+        </div>
+
+        <!-- إرسال إشعار إلى المستخدم -->
+        <h3>إرسال إشعار</h3>
+        <label for="userCode">كود المستخدم:</label>
+        <input type="text" id="userCode" placeholder="أدخل الكود التعريفي">
+        <label for="message">الرسالة:</label>
+        <textarea id="message" placeholder="أدخل الرسالة"></textarea>
+        <button onclick="sendMessage()">إرسال</button>
+
+        <h2>إدارة المسابقة</h2>
+        <div>
+            <label for="quizQuestion">السؤال الجديد:</label>
+            <input type="text" id="quizQuestion" placeholder="أدخل السؤال">
+            <label for="quizAnswers">الإجابات:</label>
+            <textarea id="quizAnswers" placeholder="أدخل الإجابات مفصولة بـ; (نقطة و فاصلة)"></textarea>
+            <button onclick="updateQuiz()">تحديث السؤال والإجابات</button>
+        </div>
+
+    </div>
+
+    <script src="admin-dashboard.js"></script>
+</body>
+</html>
+
